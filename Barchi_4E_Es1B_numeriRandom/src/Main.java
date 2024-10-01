@@ -25,7 +25,7 @@ public class Main {
             scelta = Menu(opzioni, scanner);
             switch (scelta) {
                 case 1:
-                    arrRan =generaRandom(QUANTINUMERI, MINRANGE, MAXRANGE); //generazione numeri casuali
+                    arrRan = generaRandom(QUANTINUMERI, MINRANGE, MAXRANGE); //generazione numeri casuali
                     System.out.println("Numeri generati");
                     Wait(2);
                     break;
