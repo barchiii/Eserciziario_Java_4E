@@ -33,7 +33,13 @@ public class Main {
         do {
             try {
                 ripeti = false;
-                dividi(kb);
+                System.out.println("Inserisci primo numero: ");
+                a = Integer.parseInt(kb.nextLine());
+
+                System.out.println("Inserisci secondo numero: ");
+                b = Integer.parseInt(kb.nextLine());
+
+                dividi(a, b);
             }
             catch(Exception e)
             {
@@ -43,21 +49,13 @@ public class Main {
         } while (ripeti);
     }
 
-    private static double dividi(Scanner kb) throws Exception {
-        int n1, n2;
+    private static double dividi(int a, int b) throws Exception {
         double divisione = 0;
 
-        System.out.println("Inserisci n1: ");
-        n1 = Integer.parseInt(kb.nextLine());
-
-        System.out.println("Inserisci n2: ");
-        n2 = Integer.parseInt(kb.nextLine());
-
-        if (n2 != 0)
+        if (b != 0)
         {
-            divisione = n1 / n2;
-            System.out.printf("Divisione: %f", divisione);
-
+            divisione = (double)a / b;
+            System.out.printf("Divisione: %.2f", divisione);
             return divisione;
         }
         else
